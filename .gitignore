@@ -7,7 +7,6 @@ dist/
 # Editors
 .idea/
 .vs/
-.vscode/
 .fleet/
 
 # Other
