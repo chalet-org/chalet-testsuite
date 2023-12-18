@@ -1,2 +1,3 @@
-# chalet-test-suite
+# chalet-testsuite
+
 Platform test suite

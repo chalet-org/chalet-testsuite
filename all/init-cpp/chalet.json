@@ -1,0 +1,24 @@
+{
+	"name": "init-cpp",
+	"version": "1.0.0",
+	"targets": {
+		"init-cpp": {
+			"kind": "executable",
+			"language": "C++",
+			"settings:Cxx": {
+				"cppStandard": "c++20",
+				"warningsPreset": "pedantic",
+				"includeDirs": [
+					"src"
+				]
+			},
+			"files": "src/**.cpp"
+		}
+	},
+	"distribution": {
+		"all": {
+			"kind": "bundle",
+			"buildTargets": "*"
+		}
+	}
+}

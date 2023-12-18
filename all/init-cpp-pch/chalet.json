@@ -1,0 +1,25 @@
+{
+	"name": "init-cpp-pch",
+	"version": "1.0.0",
+	"targets": {
+		"init-cpp-pch": {
+			"kind": "executable",
+			"language": "C++",
+			"settings:Cxx": {
+				"cppStandard": "c++20",
+				"warningsPreset": "pedantic",
+				"precompiledHeader": "src/pch.hpp",
+				"includeDirs": [
+					"src"
+				]
+			},
+			"files": "src/**.cpp"
+		}
+	},
+	"distribution": {
+		"all": {
+			"kind": "bundle",
+			"buildTargets": "*"
+		}
+	}
+}

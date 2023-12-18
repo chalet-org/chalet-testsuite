@@ -1,0 +1,28 @@
+{
+	"name": "init-objective-cpp",
+	"version": "1.0.0",
+	"targets": {
+		"init-objective-cpp": {
+			"kind": "executable",
+			"language": "Objective-C++",
+			"settings:Cxx": {
+				"cppStandard": "c++20",
+				"warningsPreset": "pedantic",
+				"precompiledHeader": "src/pch.hpp",
+				"includeDirs": [
+					"src"
+				],
+				"appleFrameworks": [
+					"Foundation"
+				]
+			},
+			"files": "src/**.mm"
+		}
+	},
+	"distribution": {
+		"all": {
+			"kind": "bundle",
+			"buildTargets": "*"
+		}
+	}
+}

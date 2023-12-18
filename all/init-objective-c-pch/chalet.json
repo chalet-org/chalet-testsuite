@@ -1,0 +1,28 @@
+{
+	"name": "init-objective-c-pch",
+	"version": "1.0.0",
+	"targets": {
+		"init-objective-c-pch": {
+			"kind": "executable",
+			"language": "Objective-C",
+			"settings:Cxx": {
+				"cStandard": "c17",
+				"warningsPreset": "pedantic",
+				"precompiledHeader": "src/pch.h",
+				"includeDirs": [
+					"src"
+				],
+				"appleFrameworks": [
+					"Foundation"
+				]
+			},
+			"files": "src/**.m"
+		}
+	},
+	"distribution": {
+		"all": {
+			"kind": "bundle",
+			"buildTargets": "*"
+		}
+	}
+}

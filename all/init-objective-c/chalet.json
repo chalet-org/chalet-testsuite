@@ -1,0 +1,27 @@
+{
+	"name": "init-objective-c",
+	"version": "1.0.0",
+	"targets": {
+		"init-objective-c": {
+			"kind": "executable",
+			"language": "Objective-C",
+			"settings:Cxx": {
+				"cStandard": "c17",
+				"warningsPreset": "pedantic",
+				"includeDirs": [
+					"src"
+				],
+				"appleFrameworks": [
+					"Foundation"
+				]
+			},
+			"files": "src/**.m"
+		}
+	},
+	"distribution": {
+		"all": {
+			"kind": "bundle",
+			"buildTargets": "*"
+		}
+	}
+}

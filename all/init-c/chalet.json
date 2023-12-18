@@ -1,0 +1,24 @@
+{
+	"name": "init-c",
+	"version": "1.0.0",
+	"targets": {
+		"init-c": {
+			"kind": "executable",
+			"language": "C",
+			"settings:Cxx": {
+				"cStandard": "c17",
+				"warningsPreset": "pedantic",
+				"includeDirs": [
+					"src"
+				]
+			},
+			"files": "src/**.c"
+		}
+	},
+	"distribution": {
+		"all": {
+			"kind": "bundle",
+			"buildTargets": "*"
+		}
+	}
+}

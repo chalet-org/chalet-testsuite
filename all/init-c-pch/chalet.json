@@ -1,0 +1,25 @@
+{
+	"name": "init-c-pch",
+	"version": "1.0.0",
+	"targets": {
+		"init-c-pch": {
+			"kind": "executable",
+			"language": "C",
+			"settings:Cxx": {
+				"cStandard": "c17",
+				"warningsPreset": "pedantic",
+				"precompiledHeader": "src/pch.h",
+				"includeDirs": [
+					"src"
+				]
+			},
+			"files": "src/**.c"
+		}
+	},
+	"distribution": {
+		"all": {
+			"kind": "bundle",
+			"buildTargets": "*"
+		}
+	}
+}
