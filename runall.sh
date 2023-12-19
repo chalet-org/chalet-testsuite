@@ -17,7 +17,20 @@ if [[ $PLATFORM == "" ]]; then
 	exit 1
 fi
 
-$SHELL "$CWD/$PLATFORM/testsuite-$PLATFORM.sh"
+platform_dir="$CWD/platform"
+
+if [ ! -d "$platform_dir" ]; then
+	echo "Directory does not exist: $platform_dir"
+	exit 1
+fi
+
+source "$platform_dir/common.sh"
+
+check_dir "$CWD/tests"
+
+source "$platform_dir/$PLATFORM/testsuite-$PLATFORM.sh"
+
+echo "All tests passed!"
 
 echo
 exit 0
