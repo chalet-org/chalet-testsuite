@@ -1,0 +1,25 @@
+{
+	"name": "init-cpp-modules-std",
+	"version": "1.0.0",
+	"targets": {
+		"init-cpp-modules-std": {
+			"kind": "executable",
+			"language": "C++",
+			"settings:Cxx": {
+				"cppStandard": "c++23",
+				"cppModules": true,
+				"warningsPreset": "pedantic",
+				"includeDirs": [
+					"src"
+				]
+			},
+			"files": "src/**.cc"
+		}
+	},
+	"distribution": {
+		"all": {
+			"kind": "bundle",
+			"buildTargets": "*"
+		}
+	}
+}

@@ -28,6 +28,8 @@ Templates generated from `chalet init`. We just want these to cover as many buil
 | C++ w/ PCH | vs-stable | x64, x86, arm, arm64 | makefile, ninja, native | Release, Debug |
 |            | llvm      | x86_64, i686         | makefile, ninja, native | Release, Debug |
 |            | gcc       | x86_64, i686         | makefile, ninja, native | Release, Debug |
+| C++ modules (20) | vs-preview | x64, x86, arm, arm64 | native | Release, Debug |
+| C++ modules (23 w/ import std) | vs-preview | x64, x86, arm, arm64 | native | Release, Debug |
 
 **MacOS**
 
