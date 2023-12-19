@@ -39,7 +39,7 @@ test_with_x86_arches() {
 	test_with_build_strategies $@ -a x86
 }
 
-test_on_macos() {
+test_with_toolchains() {
 	test_with_x86_arches $@ -t gcc
 	test_with_x86_arches $@ -t llvm
 	test_with_arm_arches $@ -t gcc
@@ -51,7 +51,7 @@ clean_path() {
 }
 
 test_each_build_file() {
-	test_on_macos $@ -i chalet.json
+	test_with_toolchains $@ -i chalet.json
 }
 
 test_path() {
