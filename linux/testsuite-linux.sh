@@ -32,18 +32,26 @@ test_with_build_strategies() {
 test_with_arm_arches() {
 	test_with_build_strategies $@ -a arm64
 	test_with_build_strategies $@ -a arm
+	test_with_build_strategies $@ -a armhf
 }
 
 test_with_x86_arches() {
-	test_with_build_strategies $@ -a x64
-	test_with_build_strategies $@ -a x86
+	test_with_build_strategies $@ -a x86_64
+	test_with_build_strategies $@ -a i686
+}
+
+test_with_mingw_arches() {
+	test_with_build_strategies $@ -a x86_64-w64-mingw32
+	test_with_build_strategies $@ -a i686-w64-mingw32
 }
 
 test_with_toolchains() {
 	test_with_x86_arches $@ -t gcc
-	test_with_x86_arches $@ -t llvm
 	test_with_arm_arches $@ -t gcc
+	test_with_mingw_arches $@ -t gcc
+	test_with_x86_arches $@ -t llvm
 	test_with_arm_arches $@ -t llvm
+	test_with_mingw_arches $@ -t llvm
 }
 
 clean_path() {
