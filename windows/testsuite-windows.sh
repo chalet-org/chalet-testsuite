@@ -4,7 +4,8 @@ CWD="$PWD"
 
 test_on_error_code() {
     this_command=$@
-	$@ 1> /dev/null
+	# $@ 1> /dev/null
+	$@
     exit_code=$?
     if [ $exit_code -ne 0 ]; then
         >&2 echo "\"${this_command}\" exited with code: ${exit_code}"
@@ -28,14 +29,21 @@ test_with_build_strategies() {
 	test_with_configurations $@ -b native
 }
 
-test_with_apple_llvm_arches() {
+test_with_arm_arches() {
 	test_with_build_strategies $@ -a arm64
-	test_with_build_strategies $@ -a x86_64
-	test_with_build_strategies $@ -a universal
+	test_with_build_strategies $@ -a arm
+}
+
+test_with_win32_arches() {
+	test_with_build_strategies $@ -a x64
+	test_with_build_strategies $@ -a x86
 }
 
 test_on_macos() {
-	test_with_apple_llvm_arches $@ -t apple-llvm
+	test_with_win32_arches $@ -t vs-stable
+	test_with_arm_arches $@ -t vs-stable
+	test_with_win32_arches $@ -t llvm
+	test_with_win32_arches $@ -t gcc
 }
 
 clean_path() {
@@ -60,10 +68,6 @@ test_path "init-c"
 test_path "init-c-pch"
 test_path "init-cpp"
 test_path "init-cpp-pch"
-test_path "init-objective-c"
-test_path "init-objective-c-pch"
-test_path "init-objective-cpp"
-test_path "init-objective-cpp-pch"
 
 echo "All tests passed!"
 
