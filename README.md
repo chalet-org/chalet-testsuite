@@ -60,7 +60,7 @@ Templates generated from `chalet init`. We just want these to cover as many buil
 | C++ w/ PCH | llvm      | x64, x86, arm, armhf, arm64, x86_64-w64-mingw32, i686-w64-mingw32 | makefile, ninja, native | Release, Debug |
 |            | gcc       | x64, x86, arm, armhf, arm64, x86_64-w64-mingw32, i686-w64-mingw32 | makefile, ninja, native | Release, Debug |
 
-**Linux - Rasbian**
+**Linux - Raspbian**
 
 - Just the armhf architecture for now
 
