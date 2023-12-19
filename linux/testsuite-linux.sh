@@ -40,10 +40,10 @@ test_with_x86_arches() {
 }
 
 test_on_macos() {
-	test_with_x86_arches $@ -t vs-stable
-	test_with_arm_arches $@ -t vs-stable
-	test_with_x86_arches $@ -t llvm
 	test_with_x86_arches $@ -t gcc
+	test_with_x86_arches $@ -t llvm
+	test_with_arm_arches $@ -t gcc
+	test_with_arm_arches $@ -t llvm
 }
 
 clean_path() {
