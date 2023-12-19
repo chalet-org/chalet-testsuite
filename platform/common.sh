@@ -36,8 +36,8 @@ with_configurations() {
 }
 
 with_build_strategies() {
-	# with_configurations $@ -b makefile
-	# with_configurations $@ -b ninja
+	with_configurations $@ -b makefile
+	with_configurations $@ -b ninja
 	with_configurations $@ -b native
 }
 
