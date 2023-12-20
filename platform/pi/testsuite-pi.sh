@@ -6,7 +6,7 @@ with_linux_pi_toolchains() {
 }
 
 with_build_file() {
-	with_pi_toolchains $@ -i chalet.json
+	with_linux_pi_toolchains $@ -i chalet.json
 }
 
 test_path with_build_file "init-c"
