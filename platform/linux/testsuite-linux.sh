@@ -11,6 +11,8 @@ with_linux_toolchains() {
 	with_mingw_arches $@ -t gcc
 	with_linux_arches $@ -t llvm
 	with_mingw_arches $@ -t llvm
+	with_linux_arches $@ -t llvm-14
+	with_mingw_arches $@ -t llvm-14
 }
 
 with_build_file() {

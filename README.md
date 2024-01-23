@@ -54,12 +54,16 @@ Templates generated from `chalet init`. We just want these to cover as many buil
 | Test       | Toolchains | Architectures       | Strategies              | Configurations |
 | ---------- | ---------- | ------------------- | ----------------------- | -------------- | 
 | C          | llvm       | x86_64, i686, arm, armhf, arm64, x86_64-w64-mingw32, i686-w64-mingw32 | makefile, ninja, native | Release, Debug |
+|            | llvm-14    | x86_64, i686, arm, armhf, arm64, x86_64-w64-mingw32, i686-w64-mingw32 | makefile, ninja, native | Release, Debug |
 |            | gcc        | x86_64, i686, arm, armhf, arm64, x86_64-w64-mingw32, i686-w64-mingw32 | makefile, ninja, native | Release, Debug |
 | C w/ PCH   | llvm       | x86_64, i686, arm, armhf, arm64, x86_64-w64-mingw32, i686-w64-mingw32 | makefile, ninja, native | Release, Debug |
+|            | llvm-14    | x86_64, i686, arm, armhf, arm64, x86_64-w64-mingw32, i686-w64-mingw32 | makefile, ninja, native | Release, Debug |
 |            | gcc        | x86_64, i686, arm, armhf, arm64, x86_64-w64-mingw32, i686-w64-mingw32 | makefile, ninja, native | Release, Debug |
 | C++        | llvm       | x86_64, i686, arm, armhf, arm64, x86_64-w64-mingw32, i686-w64-mingw32 | makefile, ninja, native | Release, Debug |
+|            | llvm-14    | x86_64, i686, arm, armhf, arm64, x86_64-w64-mingw32, i686-w64-mingw32 | makefile, ninja, native | Release, Debug |
 |            | gcc        | x86_64, i686, arm, armhf, arm64, x86_64-w64-mingw32, i686-w64-mingw32 | makefile, ninja, native | Release, Debug |
 | C++ w/ PCH | llvm       | x86_64, i686, arm, armhf, arm64, x86_64-w64-mingw32, i686-w64-mingw32 | makefile, ninja, native | Release, Debug |
+|            | llvm-14    | x86_64, i686, arm, armhf, arm64, x86_64-w64-mingw32, i686-w64-mingw32 | makefile, ninja, native | Release, Debug |
 |            | gcc        | x86_64, i686, arm, armhf, arm64, x86_64-w64-mingw32, i686-w64-mingw32 | makefile, ninja, native | Release, Debug |
 
 **Linux - Raspbian**
