@@ -7,7 +7,7 @@ dist/
 # Editors
 .idea/
 .vs/
-.fleet/
+.zed/
 
 # Other
 .cache/
